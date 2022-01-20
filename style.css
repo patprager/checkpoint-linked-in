@@ -4,7 +4,24 @@
   box-sizing: border-box;
 }
 
+:root {
+  --border-cards: 0.013rem solid #d9d9d9;
+  --border-radius-cards: 0.17rem;
+  --background-color-cards: snow;
+}
+
 html {
   margin: 0px;
   background-color: #f0efec;
+  _display: flex;
+  _align-content: center;
+}
+
+.content-card,
+.header-card {
+  margin: 2rem;
+  padding: 3rem;
+  background-color: var(--background-color-cards);
+  border: var(--border-cards);
+  border-radius: var(--border-radius-cards);
 }
