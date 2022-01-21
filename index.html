@@ -14,12 +14,95 @@
       rel="stylesheet"
       href=" https://unpkg.com/normalize.css@8.0.1/normalize.css "
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main>
-      <header class="header-card"></header>
-      <article class="content-card"></article>
+      <header class="header-container">
+        <p class="pending-number" id="pending-number">No pending invitations</p>
+        <button class="incognito-button-right">Manage</button>
+      </header>
+      <!-- Content-Container with person you know -->
+      <section class="content-container">
+        <header class="header-content-container">
+          <p
+            class="description-people-you-know"
+            id="description-people-you-know"
+          >
+            People you many know in Greater Nuremberg Metropolitan Area
+          </p>
+          <button class="incognito-button-right">See all</button>
+        </header>
+
+        <!-- Once Person in the Contacts-list -->
+
+        <article class="contact-card" id="contact-card">
+          <header class="profil-header">
+            <!-- Icon entfernen von Personen -->
+
+            <div class="profil-background-img">
+              <div class="delete-contact">
+                <svg
+                  class="delete-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-x-lg"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"
+                  />
+                </svg>
+                <!-- Background–IMG of person -->
+              </div>
+              <img
+                src=""
+                alt="background-img"
+                class="background-img"
+                id="background-img"
+              />
+              <!-- Profilbild -->
+              <div class="profil-img">
+                <img
+                  class="person-img"
+                  id="person-img"
+                  src=""
+                  alt="profil-img"
+                />
+              </div>
+            </div>
+          </header>
+          <!-- Name plus job Title -->
+          <h4 class="person-name" id="person-name">Karl Heinz</h4>
+          <p class="job-title" id="job-title">Bauingeneur</p>
+
+          <p class="number-of-contacts" id="number-of-contacts">
+            mutual connection
+          </p>
+
+          <!-- Connect Button — Toggle Button -->
+          <footer>
+            <button class="connect-button" id="connect-toggle-button">
+              Connect
+            </button>
+          </footer>
+        </article>
+      </section>
     </main>
     <script src="script.js"></script>
   </body>
