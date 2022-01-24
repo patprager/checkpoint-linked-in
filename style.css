@@ -21,6 +21,7 @@ body {
   background-color: #f0efec;
   font-family: "Roboto", sans-serif;
   color: var(--font-color);
+  width: 75%;
 }
 
 .header-container,
@@ -69,25 +70,41 @@ body {
 }
 
 .contact-cards {
-  margin-top: 0.95rem;
-  margin-left: 0.5rem;
-  margin-bottom: 0.5rem;
-  width: 12rem;
-  height: 17rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 
+  justify-content: space-around;
+  padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+}
+
+.contact-card {
   background-color: snow;
   border: 0.003rem solid #d9d9d9;
   border-radius: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 0.7rem;
 }
 
-.contact-cards:hover {
+.contact-card:hover {
   box-shadow: -2px -1px 15px -7px rgba(28, 28, 28, 0.74);
   -webkit-box-shadow: -2px -1px 15px -7px rgba(28, 28, 28, 0.74);
   -moz-box-shadow: -2px -1px 15px -7px rgba(28, 28, 28, 0.74);
 }
+.user-background-container {
+  height: 4rem;
+  position: relative;
+
+  width: 100%;
+}
+
 img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
 }
 .user-background-img {
   background-color: rgb(234, 240, 240);
@@ -96,20 +113,27 @@ img {
   width: 11.9rem;
   height: 4rem;
   position: relative;
+
+  background-repeat: round;
+  background-size: 50% 50%;
 }
 
 .user-img {
-  _margin-top: 0.75rem;
-  margin-left: 3rem;
+  _margin-top: 0.55rem;
 
   width: 5.5rem;
   height: 5.5rem;
 
   background: rgb(209, 208, 208);
   border-radius: 50%;
+
+  position: absolute;
 }
 
 .close-icon {
+  margin-top: 0.25rem;
+  margin-right: 0.25rem;
+
   width: 1.7rem;
   height: 1.7rem;
 
@@ -118,6 +142,12 @@ img {
 
   border: none;
   border-radius: 50%;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  z-index: 1;
 }
 
 .contact-name {
