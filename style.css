@@ -1,0 +1,190 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --border-cards: 0.013rem solid #d9d9d9;
+  --border-radius-cards: 0.53rem;
+  --background-color-cards: snow;
+  --font-color: #191919;
+  --font-color-description-education: #666666;
+  --linked-in-color-blue: #2b65bc;
+}
+
+html {
+  margin: 0px;
+}
+
+body {
+  background-color: #f0efec;
+  font-family: "Roboto", sans-serif;
+  color: var(--font-color);
+  width: 75%;
+}
+
+.header-container,
+.header-content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header-container,
+.content-container {
+  margin: 2rem;
+  padding: 0.25rem;
+  background-color: var(--background-color-cards);
+  border: var(--border-cards);
+  border-radius: var(--border-radius-cards);
+}
+
+.connections,
+.description-people-you-know {
+  font-size: 0.875rem;
+}
+
+.incognito-button-right {
+  margin-left: 0.95rem;
+
+  font-size: 0.995rem;
+  color: #5e5e5e;
+  font-weight: bold;
+  font-style: 700;
+
+  padding: 0.025rem 1.25rem 0.025rem 1.25rem;
+
+  background-color: transparent;
+  border: none;
+}
+
+.incognito-button-right:hover {
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #ebebeb;
+}
+
+.description-people-you-know,
+.connections {
+  margin-left: 0.75rem;
+}
+
+.contact-cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  justify-content: space-around;
+  padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+}
+
+.contact-card {
+  background-color: snow;
+  border: 0.003rem solid #d9d9d9;
+  border-radius: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 0.7rem;
+}
+
+.contact-card:hover {
+  box-shadow: -2px -1px 15px -7px rgba(28, 28, 28, 0.74);
+  -webkit-box-shadow: -2px -1px 15px -7px rgba(28, 28, 28, 0.74);
+  -moz-box-shadow: -2px -1px 15px -7px rgba(28, 28, 28, 0.74);
+}
+.user-background-container {
+  height: 4rem;
+  position: relative;
+
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+.user-background-img {
+  background-color: rgb(234, 240, 240);
+  border: none;
+  border-radius: 0.492rem 0.492rem 0 0;
+  width: 11.9rem;
+  height: 4rem;
+  position: relative;
+
+  background-repeat: round;
+  background-size: 50% 50%;
+}
+
+.user-img {
+  _margin-top: 0.55rem;
+
+  width: 5.5rem;
+  height: 5.5rem;
+
+  background: rgb(209, 208, 208);
+  border-radius: 50%;
+
+  position: absolute;
+}
+
+.close-icon {
+  margin-top: 0.25rem;
+  margin-right: 0.25rem;
+
+  width: 1.7rem;
+  height: 1.7rem;
+
+  background: rgba(141, 141, 141, 0.274);
+  color: snow;
+
+  border: none;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  z-index: 1;
+}
+
+.contact-name {
+  margin-top: 1.5rem;
+  font-weight: bold;
+  font-style: 700;
+}
+.job-title {
+  margin-top: 0.75rem;
+  color: var(--font-color-description-education);
+  font-size: 0.975rem;
+}
+.connect-button {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: var(--linked-in-color-blue);
+  font-weight: bold;
+  font-style: 700;
+
+  padding: 0.45rem 3.5rem 0.45rem 3.5rem;
+
+  border: solid 0.15rem var(--linked-in-color-blue);
+  border-radius: 2rem;
+  background-color: snow;
+}
+
+.connect-button:hover {
+  background-color: #e5f0fd;
+  border: solid 0.15rem var(--linked-in-color-blue);
+}
+
+.mutual-connections {
+  margin-left: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--font-color-description-education);
+}
+
+.mutual-connections::before {
+  content: " 🖇";
+}
