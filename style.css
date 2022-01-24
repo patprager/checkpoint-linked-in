@@ -10,6 +10,7 @@
   --background-color-cards: snow;
   --font-color: #191919;
   --font-color-description-education: #666666;
+  --linked-in-color-blue: #2b65bc;
 }
 
 html {
@@ -21,14 +22,15 @@ body {
   font-family: "Roboto", sans-serif;
   color: var(--font-color);
 }
+
 .header-container,
 .header-content-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.content-container,
-.header-container {
+.header-container,
+.content-container {
   margin: 2rem;
   padding: 0.25rem;
   background-color: var(--background-color-cards);
@@ -36,22 +38,23 @@ body {
   border-radius: var(--border-radius-cards);
 }
 
+.connections,
+.description-people-you-know {
+  font-size: 0.875rem;
+}
+
 .incognito-button-right {
-  margin-left: 0.75rem;
+  margin-left: 0.95rem;
+
+  font-size: 0.995rem;
   color: #5e5e5e;
   font-weight: bold;
   font-style: 700;
-  font-size: 1.15rem;
+
+  padding: 0.025rem 1.25rem 0.025rem 1.25rem;
 
   background-color: transparent;
   border: none;
-
-  /* hover Button padding smaller*/
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-
-  padding-top: 0.05rem;
-  padding-bottom: 0.05rem;
 }
 
 .incognito-button-right:hover {
@@ -61,81 +64,97 @@ body {
 }
 
 .description-people-you-know,
-.pending-number {
+.connections {
   margin-left: 0.75rem;
 }
 
-.contact-card {
-  margin-top: 0.75rem;
+.contact-cards {
+  margin-top: 0.95rem;
   margin-left: 0.5rem;
-  width: 10rem;
+  margin-bottom: 0.5rem;
+  width: 12rem;
   height: 17rem;
 
   background-color: snow;
   border: 0.003rem solid #d9d9d9;
-  border-radius: 0.25rem;
-
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  border-radius: 0.5rem;
 }
 
-.contact-card:hover {
+.contact-cards:hover {
   box-shadow: -2px -1px 15px -7px rgba(28, 28, 28, 0.74);
   -webkit-box-shadow: -2px -1px 15px -7px rgba(28, 28, 28, 0.74);
   -moz-box-shadow: -2px -1px 15px -7px rgba(28, 28, 28, 0.74);
 }
-.profil-header {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+img {
+  max-width: 100%;
+  max-height: 100%;
 }
-.profil-background-img {
+.user-background-img {
   background-color: rgb(234, 240, 240);
-  width: 9.9rem;
+  border: none;
+  border-radius: 0.492rem 0.492rem 0 0;
+  width: 11.9rem;
   height: 4rem;
+  position: relative;
 }
 
-.profil-img {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.user-img {
+  _margin-top: 0.75rem;
+  margin-left: 3rem;
 
-  width: 4rem;
-  height: 4rem;
-  background: rgb(172, 172, 172);
+  width: 5.5rem;
+  height: 5.5rem;
+
+  background: rgb(209, 208, 208);
   border-radius: 50%;
 }
 
-.delete-contact {
-  width: 1.5rem;
-  height: 1.5rem;
+.close-icon {
+  width: 1.7rem;
+  height: 1.7rem;
+
   background: rgba(141, 141, 141, 0.274);
-  border-radius: 50%;
+  color: snow;
 
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  border: none;
+  border-radius: 50%;
 }
-.delete-icon {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+
+.contact-name {
+  margin-top: 1.5rem;
+  font-weight: bold;
+  font-style: 700;
+}
+.job-title {
+  margin-top: 0.75rem;
+  color: var(--font-color-description-education);
+  font-size: 0.975rem;
 }
 .connect-button {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-
-  font-size: 12px;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: var(--linked-in-color-blue);
+  font-weight: bold;
   font-style: 700;
-  border: solid 0.075rem #2b65bc;
+
+  padding: 0.45rem 3.5rem 0.45rem 3.5rem;
+
+  border: solid 0.15rem var(--linked-in-color-blue);
   border-radius: 2rem;
   background-color: snow;
 }
 
 .connect-button:hover {
   background-color: #e5f0fd;
-  border: solid 0.015rem #2b65bc;
+  border: solid 0.15rem var(--linked-in-color-blue);
+}
+
+.mutual-connections {
+  margin-left: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--font-color-description-education);
+}
+
+.mutual-connections::before {
+  content: " 🖇";
 }
