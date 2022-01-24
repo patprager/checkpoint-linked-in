@@ -7,23 +7,25 @@ let pendingConnections = 0;
 
 function createContactCards(container, data) {
   const userContact = document.createElement("div");
-  userContact.classList.add("user-contact-card");
+  const contactCardsContainer = document.querySelector(".contact-cards");
+  userContact.classList.add("contact-card");
 
   userContact.innerHTML = `
-  <img class="user-background-img" src="${data.backgroundImage}" />
+  <div class="user-background-container"> <button class="close-icon">
+  X
+</button> <img class="user-background-img" src="${data.backgroundImage}" />
+  </div>
     <img class="user-img" src="${data.picture}" />
     <p class="contact-name">${data.name.title} ${data.name.first} ${data.name.last}</p>
     <p class="job-title">${data.title}</p>
-    <p class="mutual-connections>${data.mutualConnections} mutual Connections</p>
+    <p class="mutual-connections">${data.mutualConnections} mutual Connections</p>
 
-    <button class="connect-button" data-clicked ="0">
+    <button class="connect-button" data-clicked="0">
         Connect
     </button>
-    <button class="close-icon">
-        X
-    </button>
+    
 `;
-  container.appendChild(userContact);
+  contactCardsContainer.appendChild(userContact);
 }
 
 function clickedConnectBtn(event) {
